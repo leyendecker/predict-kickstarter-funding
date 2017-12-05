@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>report</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(56, 58, 66); background-color: rgb(250, 250, 250); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(94, 97, 110); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 111, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(94, 97, 110); border-color: rgb(209, 209, 210); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(209, 209, 210); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(209, 209, 210); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(0, 0, 0); background-color: rgb(234, 234, 235); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(240, 240, 240); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(0, 0, 0); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(209, 209, 210) rgb(209, 209, 210) rgb(193, 193, 194); border-image: initial; background-color: rgb(234, 234, 235); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.0392157); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher {
+  background-color: #777;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #fafafa;
+  color: #383a42;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(56, 58, 66, 0.05);
+}
+pre.editor-colors .invisible {
+  color: #383a42;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #526fff;
+}
+pre.editor-colors .selection .region {
+  background-color: #e5e5e6;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #526fff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 111, 255, 0.2);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #526fff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #9d9d9f;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #383a42;
+  background-color: #f2f2f2;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #383a42;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(255, 20, 20, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #383a42;
+}
+.syntax--comment {
+  color: #a0a1a7;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #a0a1a7;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #c18401;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #50a14f;
+}
+.syntax--keyword {
+  color: #a626a4;
+}
+.syntax--keyword.syntax--control {
+  color: #a626a4;
+}
+.syntax--keyword.syntax--operator {
+  color: #383a42;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #4078f2;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #986801;
+}
+.syntax--storage {
+  color: #a626a4;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #a626a4;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #383a42;
+}
+.syntax--constant {
+  color: #986801;
+}
+.syntax--constant.syntax--variable {
+  color: #986801;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #0184bc;
+}
+.syntax--constant.syntax--numeric {
+  color: #986801;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #0184bc;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #0184bc;
+}
+.syntax--variable {
+  color: #e45649;
+}
+.syntax--variable.syntax--interpolation {
+  color: #ca1243;
+}
+.syntax--variable.syntax--parameter {
+  color: #383a42;
+}
+.syntax--string {
+  color: #50a14f;
+}
+.syntax--string.syntax--regexp {
+  color: #0184bc;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #c18401;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e45649;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #a0a1a7;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #383a42;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #4078f2;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #c18401;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #ca1243;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #383a42;
+}
+.syntax--support.syntax--class {
+  color: #c18401;
+}
+.syntax--support.syntax--type {
+  color: #0184bc;
+}
+.syntax--support.syntax--function {
+  color: #0184bc;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #4078f2;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #4078f2;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #c18401;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #4078f2;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e45649;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #986801;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #4078f2;
+}
+.syntax--meta.syntax--class {
+  color: #c18401;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #383a42;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #383a42;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e45649;
+}
+.syntax--meta.syntax--link {
+  color: #986801;
+}
+.syntax--meta.syntax--require {
+  color: #4078f2;
+}
+.syntax--meta.syntax--selector {
+  color: #a626a4;
+}
+.syntax--meta.syntax--separator {
+  background-color: #373b41;
+  color: #383a42;
+}
+.syntax--meta.syntax--tag {
+  color: #383a42;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #383a42;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #000000 !important;
+  background-color: #f2a60d !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #ff1414 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #986801;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #a626a4;
+}
+.syntax--markup.syntax--deleted {
+  color: #e45649;
+}
+.syntax--markup.syntax--italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e45649;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #4078f2;
+}
+.syntax--markup.syntax--link {
+  color: #0184bc;
+}
+.syntax--markup.syntax--inserted {
+  color: #50a14f;
+}
+.syntax--markup.syntax--quote {
+  color: #986801;
+}
+.syntax--markup.syntax--raw {
+  color: #50a14f;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #a626a4;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #a626a4;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #a626a4;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #696c77;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #383a42;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #383a42;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #4078f2;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #a626a4;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #50a14f;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e45649;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e45649;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #ca1243;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #986801;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #c18401;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #696c77;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #4078f2;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #a626a4;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e45649;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #c18401;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #c18401;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #a626a4;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e45649;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #383a42;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #0184bc;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #a626a4;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e45649;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e45649;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #50a14f;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #0184bc;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #a626a4;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #986801;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1>Machine Learning Engineer Nanodegree</h1>
+<h2>Capstone Project</h2>
+<p>Gustavo Zadrozny Leyendecker</p>
+<p>November 17, 2017</p>
+<h2>I. Definition</h2>
+<p><em>(approx. 1-2 pages)</em></p>
+<h3>Project Overview</h3>
+<p>Kickstarter is a community built with the purpose of funding projects specially
+but not exclusively creative and artistic work. It can be anything, from software, a game or a gadget to the production of a film or music. The artist, filmmaker, designer, developer or creator can publish a proposal of his/her project and submit for crowdfunding. The community formed by more than 10 million people can than fund the project, each backer is able to contribute with an specific amount of money.</p>
+<p>When submitting the project proposal, the project owner defines a goal that is
+the total amount that he needs or expects for getting the project off the ground and a deadline for getting funded. If the goal is met in the end of the period, the owner gets funded, otherwise he gets nothing and the money goes back to the investors. [<a href="https://www.kickstarter.com/about">https://www.kickstarter.com/about</a>]</p>
+<p>Kickstarted released it's data for public access and a dataset was published on
+Kaggle. [<a href="https://www.kaggle.com/codename007/funding-successful-projects">https://www.kaggle.com/codename007/funding-successful-projects</a>]</p>
+<p>The following list describes the attributes available on the dataset.</p>
+<ul>
+<li>project_id: unique id of project</li>
+<li>name: name of the project</li>
+<li>desc: description of project</li>
+<li>goal: the goal (amount) required for the project</li>
+<li>keywords: keywords which describe project</li>
+<li>disable communication: whether the project authors has disabled communication
+option with people donating to the project</li>
+<li>country: country of project author</li>
+<li>currency: currency in which goal (amount) is required</li>
+<li>deadline: till this date the goal must be achieved (in unix timeformat)</li>
+<li>state_changed_at: at this time the project status changed. Status could be
+successful, failed, suspended, cancelled etc. (in unix timeformat)</li>
+<li>created_at: at this time the project was posted on the website(in unix timeformat)</li>
+<li>launched_at: at this time the project went live on the website(in unix timeformat)</li>
+<li>backers_count: number of people who backed the project</li>
+<li>final_status: whether the project got successfully funded (target variable – 1,0)</li>
+</ul>
+<p>The proposal on Kaggle is to solve the problem of predicting if a project will
+get funded or not based on the information made available on the dataset.
+This is a very relevant because this can help users to write better project and
+get more funding, helping the economy and amount of money invested on crowdfunding.</p>
+<h3>Problem Statement</h3>
+<p>The goal of this work is to create a prediction model that can successfully anticipate if a project will get funded or not meaning that it is a binary classification problem.</p>
+<p>The dataset includes the dimensions <code>backers_count</code> and <code>final_status</code> that are both only available at the final of the competition, therefore <code>backers_count</code> cannot be used for the classification algorithm and <code>final_status</code> is the binary variable that needs to be predicted.</p>
+<p>The following steps must be executed to create a prediction model for this problem: Data Analysis, Feature Selection, Model Selection and Validation and Performance Tuning.</p>
+<h3>Metrics</h3>
+<p>The metrics used on this project to measure it's performance is the accuracy. The accuracy can be defined as the percentage of predictions that were accurate. Or total number of true positives added to the total number of true negatives divided  by the total population.</p>
+<pre class="editor-colors lang-code"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>accuracy&nbsp;=&nbsp;(true&nbsp;positives&nbsp;+&nbsp;true&nbsp;negatives)&nbsp;/&nbsp;total&nbsp;population</span></span></div></pre>
+<p>There are a few other classification metrics that could be used for this project such as F Score and Area Under ROC Curve, and accuracy might be misleading if the number of instances are unbalanced. But since the benchmark uses accuracy as the only metric to measure performance the same metric was used. There is important to notice that 70.86% of the projects are not funded to the any accuracy lower than this value is not considered as a good result.</p>
+<p>A sample from data instances that are available for training will be used for measuring
+the performance of the code. Since there are more that 100k records for training, %5 of that will be enough for measuring the accuracy to evaluate the performacne of the solution.</p>
+<h2>II. Analysis</h2>
+<p><em>(approx. 2-4 pages)</em></p>
+<h3>Data Preparation</h3>
+<p>Before exploring the data some data transformation is needed. The following will be done:</p>
+<ol>
+<li><p>Drop unnecessary columns
+<code>state_changed_at</code> and <code>created_at</code> doesn't add much information to the data set. The
+<code>state_changed_at</code> attribute can be changed at any time, before of after the contest is
+finished. And it's most important to look at <code>launched_at</code> oposed to <code>created_at</code> dimension.</p>
+</li>
+<li><p>Replace <code>na</code> to empty strings on <code>name</code>, <code>desc</code> and <code>keywords</code> using the following code
+block:</p>
+<pre class="editor-colors lang-Python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>name</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>name</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>illna</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span class="syntax--meta syntax--empty-string syntax--single syntax--python"><span>'</span></span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>desc</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>desc</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>illna</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span class="syntax--meta syntax--empty-string syntax--single syntax--python"><span>'</span></span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>keywords</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>keywords</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>illna</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span class="syntax--meta syntax--empty-string syntax--single syntax--python"><span>'</span></span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div></pre>
+</li>
+<li><p>Convert string types to data types on fields <code>launched_at</code> and <code>deadline</code>.</p>
+</li>
+<li><p>Create a new attribute that keeps the total time in days that a project is open to
+receive investments. This is calculated by the difference of <code>deadline</code> and <code>launched_at</code>
+attributes.</p>
+</li>
+</ol>
+<h3>Data Exploration</h3>
+<p>There are 108129 instances of the dataset and 12 features (discarding <code>final_status</code> and <code>backers_count</code>). A data exploration will be done on the scalar, categorial and period variables of the dataset.</p>
+<h4>Scalar variables</h4>
+<p>The bellow tables describes the three scalar values from the dataset: <code>goal</code>, <code>backers_count</code>
+and <code>days_open</code>. Please not that <code>backers_count</code> cannot be used for prediction as it's some
+information that it's only available at the end of the period when the project is open
+for crowdfunding.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>goal</th>
+<th>backers_count</th>
+<th>days_open</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count</td>
+<td>108129.000</td>
+<td>108129.000</td>
+<td>108129.000</td>
+</tr>
+<tr>
+<td>mean</td>
+<td>36726.229</td>
+<td>123.517</td>
+<td>33.881</td>
+</tr>
+<tr>
+<td>std</td>
+<td>971902.705</td>
+<td>1176.745</td>
+<td>12.939</td>
+</tr>
+<tr>
+<td>min</td>
+<td>0.010</td>
+<td>0.000</td>
+<td>1.000</td>
+</tr>
+<tr>
+<td>25%</td>
+<td>2000.000</td>
+<td>2.000</td>
+<td>29.000</td>
+</tr>
+<tr>
+<td>50%</td>
+<td>5000.000</td>
+<td>17.000</td>
+<td>30.000</td>
+</tr>
+<tr>
+<td>75%</td>
+<td>13000.000</td>
+<td>65.000</td>
+<td>36.000</td>
+</tr>
+<tr>
+<td>max</td>
+<td>100000000.000</td>
+<td>219382.000</td>
+<td>91.000</td>
+</tr>
+</tbody>
+</table>
+<p>There is a huge standard deviation on goal attribute, there must be some outliers like the
+max value that is USD 100mi. Those instances should not be taking into consideration on the prediction algorithm as they do not reflect the reality of the dataset misleading most of the algorithms available. Those can be errors or projects that should not be taking into account for this computation. Same for backers count. Lets see an histogram for goal and
+another for backers count.</p>
+<center>
+<img title="Goal Histogram w/ Outliers" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/goal_hist_outliers.png"><br>
+Goal Histogram w/ Outliers
+</center>
+
+<center>
+<img title="Backers Count Histogram w/ Outliers" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/backers_hist_outliers.png"><br>
+Backers Count Histogram w/ Outliers
+</center>
+
+<p>With that in mind, the top and bottom 5% values of backers count and goal will be considered
+outliers and cut of from the dataset. Resulting is the table and histograms bellow.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>goal</th>
+<th>backers_count</th>
+<th>days_open</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count</td>
+<td>92581.000</td>
+<td>92581.000</td>
+<td>92581.000</td>
+</tr>
+<tr>
+<td>mean</td>
+<td>9118.470</td>
+<td>43.115</td>
+<td>34.015</td>
+</tr>
+<tr>
+<td>std</td>
+<td>11953.016</td>
+<td>63.195</td>
+<td>12.999</td>
+</tr>
+<tr>
+<td>min</td>
+<td>400.000</td>
+<td>0.000</td>
+<td>1.000</td>
+</tr>
+<tr>
+<td>25%</td>
+<td>2000.000</td>
+<td>2.000</td>
+<td>29.000</td>
+</tr>
+<tr>
+<td>50%</td>
+<td>5000.000</td>
+<td>17.000</td>
+<td>30.000</td>
+</tr>
+<tr>
+<td>75%</td>
+<td>10000.000</td>
+<td>57.000</td>
+<td>37.000</td>
+</tr>
+<tr>
+<td>max</td>
+<td>70000.000</td>
+<td>355.000</td>
+<td>91.000</td>
+</tr>
+</tbody>
+</table>
+<p>Please notice that the standard deviation of goal fell from 971902.705 to 11953.016, and
+backers count standard deviation changed from 1176.745 to 63.195. This is beneficial for a machine learning algorithm as stands for a much more normalized dataset and no instance will create a huge impact on the results.</p>
+<center>
+<img title="Goal Histogram without Outliers" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/goal_hist_no_outliers.png"><br>
+Goal Histogram w/ Outliers
+</center>
+
+<center>
+<img title="Backers Count Histogram without Outliers" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/backers_hist_no_outliers.png"><br>
+Backers Count Histogram w/ Outliers
+</center>
+
+<h4>Categorical Variables</h4>
+<p>On the present dataset <code>disable_communication</code>, <code>country</code>, <code>currency</code> and <code>final_status</code> are the
+categorical values. Please notice that <code>final_status</code> is the result that is expected to be
+predicted.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>disable_communication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>True</td>
+<td>208</td>
+</tr>
+<tr>
+<td>False</td>
+<td>92373</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US</td>
+<td>79585</td>
+</tr>
+<tr>
+<td>GB</td>
+<td>7056</td>
+</tr>
+<tr>
+<td>CA</td>
+<td>3086</td>
+</tr>
+<tr>
+<td>AU</td>
+<td>1514</td>
+</tr>
+<tr>
+<td>NL</td>
+<td>581</td>
+</tr>
+<tr>
+<td>NZ</td>
+<td>319</td>
+</tr>
+<tr>
+<td>SE</td>
+<td>148</td>
+</tr>
+<tr>
+<td>DK</td>
+<td>125</td>
+</tr>
+<tr>
+<td>IE</td>
+<td>88</td>
+</tr>
+<tr>
+<td>NO</td>
+<td>78</td>
+</tr>
+<tr>
+<td>DE</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>currency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USD</td>
+<td>79585</td>
+</tr>
+<tr>
+<td>GBP</td>
+<td>7056</td>
+</tr>
+<tr>
+<td>CAD</td>
+<td>3086</td>
+</tr>
+<tr>
+<td>AUD</td>
+<td>1514</td>
+</tr>
+<tr>
+<td>EUR</td>
+<td>670</td>
+</tr>
+<tr>
+<td>NZD</td>
+<td>319</td>
+</tr>
+<tr>
+<td>SEK</td>
+<td>148</td>
+</tr>
+<tr>
+<td>DKK</td>
+<td>125</td>
+</tr>
+<tr>
+<td>NOK</td>
+<td>78</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>final_status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>26977</td>
+</tr>
+<tr>
+<td>0</td>
+<td>65604</td>
+</tr>
+</tbody>
+</table>
+<h3>Period</h3>
+<p>There are 2 variables for period: <code>launched_at</code> and <code>deadline</code> they are shown
+in the chart bellow and demonstrate how the number of projects increased over time.</p>
+<center>
+<img title="Launched at Histogram" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/launched_at_hist.png"><br>
+Launched at Histogram
+</center>
+
+<center>
+<img title="Deadline Histogram" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/deadline_hist.png"><br>
+Deadline Histogram
+</center>
+
+
+
+<h3>Exploratory Visualization</h3>
+<p>In this section, the results of the exploratory data analysis is presented. Separating the
+variables according to it's types that can be scalar, categorical, periodic or textual.
+The main reason for doing this exploratory analysis is to understand how the variables
+(or dimensions) relates to final_status variable.</p>
+<h4>Scalar variables</h4>
+<p>The scalar variables goal and days_open were investigated. Although backers_count is also
+a scalar variable, it's a resulting variable and doesn't really mater how it related
+to final_status.</p>
+<p>As expected a correlation of goal and final_status was found as shown in the box plot bellow.
+Projects with goals larger than 6.000 are rarely approved.</p>
+<center>
+<img title="Goal Box Plot" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/goal_box.png"><br>
+Goal Box Plot
+</center>
+
+<p>No strong correlation was fount on the days_open variable.</p>
+<h4>Categorical Variables</h4>
+<p>We have four categorical values on the dataset. Those are country, currency, disable_communication
+and final_status. As final_status is the resulting value, it won't be directly investigated as the
+intention of this analysis is to understand how other variables correlate to final_status.</p>
+<p>There seems to be a correlation between country and final_status, but most important is that seems
+to be related to if a project is based on US or not. There is a very similar relation on currency
+that naturally follows the project nationality.</p>
+<center>
+<img title="Success Rate per Country" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/country_bar.png"><br>
+Success Rate per Country
+</center>
+
+<center>
+<img title="Success Rate per Currency" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/country_bar.png"><br>
+Success Rate per Currency
+</center>
+
+<p>In terms of disable_communication, there is a very strong relation were it's observed that
+no project with disable_communication got funded, as shown in the table bellow.</p>
+<table>
+<thead>
+<tr>
+<th>disable_communication</th>
+<th>final_status_T</th>
+<th>final_status_F</th>
+<th>rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>False</td>
+<td>22298</td>
+<td>54612</td>
+<td>0.290</td>
+</tr>
+<tr>
+<td>True</td>
+<td>0</td>
+<td>166</td>
+<td>0.000</td>
+</tr>
+</tbody>
+</table>
+<h4>Period Variables</h4>
+<p>The period variables that were investigated are launched_at and deadline. There is a notable
+correlation between the year that the project was launched and the final_status. The success
+rate decreases by the passage of years. This is due to a supply vs demand effect were
+much more projects are being submitted and not many people interested on putting money into
+those projects.</p>
+<center>
+<img title="Project Per Year" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/projects_per_year.png"><br>
+Project Per Year
+</center>
+
+<center>
+<img title="Success Rate Per Year" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/rate_per_year.png"><br>
+Success Rate Per Year
+</center>
+
+<p>Please notice on the charts bellow that there is a significant increate of projects
+launched on 2014 that reflects on a drop on the success rate in the same period.</p>
+<h5>Day of Week</h5>
+<p>There was also investigated the day of the week and month that the project was created
+in a way to understand if this reflects on projects success rate. There seems to be
+a correlation on day of week as show on the figure bellow. On the green line, the
+success rate is plotted based on the day of week on the deadline. And blue line the
+success rate per day of week of launch date. On x-axis, day of week from Monday to
+Sunday. So seems to be best to open the project on a Sunday with deadline on Monday
+or Tuesday.</p>
+<center>
+<img title="Success Rate Per Day of Week" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/dow_rate.png"><br>
+Success Rate Per Day of Week
+</center>
+
+<h4>Textual Variables</h4>
+<p>The intuition is that the category of the project is highly correlated to the final_status
+or success of the project. In this dataset we do not have category of the project even thought
+it could be gathered from an external data source like crawling the kickstater site, it's not
+in the scope of this project. For this reason, the textual variables might be highly important
+for the classification.</p>
+<p>There are three (3) textual variables: name, description and keywords. All of them are
+investigated creating a bag of words an calculating it's relevance using Term Frequency -
+Inverse Document Frequency (TD-IDF) [Reference Needed].
+The relevance is calculated for successful and not successful projects so those bad of
+words and relevance can be verified on the tables bellow.</p>
+<ul>
+<li>Name Variable</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>rel</th>
+<th>rel0</th>
+<th>rel1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>album</td>
+<td>1196.045</td>
+<td>741.204</td>
+<td>469.266</td>
+</tr>
+<tr>
+<td>new</td>
+<td>900.298</td>
+<td>560.219</td>
+<td>352.237</td>
+</tr>
+<tr>
+<td>film</td>
+<td>768.834</td>
+<td>445.001</td>
+<td>328.651</td>
+</tr>
+<tr>
+<td>project</td>
+<td>852.784</td>
+<td>617.870</td>
+<td>249.407</td>
+</tr>
+<tr>
+<td>debut</td>
+<td>548.325</td>
+<td>332.204</td>
+<td>224.251</td>
+</tr>
+<tr>
+<td>short</td>
+<td>469.968</td>
+<td>252.393</td>
+<td>219.361</td>
+</tr>
+<tr>
+<td>ep</td>
+<td>493.354</td>
+<td>314.560</td>
+<td>186.219</td>
+</tr>
+<tr>
+<td>book</td>
+<td>629.764</td>
+<td>466.109</td>
+<td>171.575</td>
+</tr>
+<tr>
+<td>music</td>
+<td>592.345</td>
+<td>431.703</td>
+<td>168.974</td>
+</tr>
+<tr>
+<td>record</td>
+<td>350.055</td>
+<td>193.232</td>
+<td>159.644</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Description Variable</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>rel</th>
+<th>rel0</th>
+<th>rel1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>help</td>
+<td>1364.462</td>
+<td>917.842</td>
+<td>458.155</td>
+</tr>
+<tr>
+<td>album</td>
+<td>1033.002</td>
+<td>640.131</td>
+<td>395.367</td>
+</tr>
+<tr>
+<td>new</td>
+<td>1153.798</td>
+<td>768.682</td>
+<td>395.143</td>
+</tr>
+<tr>
+<td>music</td>
+<td>908.425</td>
+<td>653.434</td>
+<td>263.543</td>
+</tr>
+<tr>
+<td>film</td>
+<td>626.003</td>
+<td>388.907</td>
+<td>239.199</td>
+</tr>
+<tr>
+<td>record</td>
+<td>582.001</td>
+<td>347.243</td>
+<td>235.946</td>
+</tr>
+<tr>
+<td>need</td>
+<td>683.009</td>
+<td>478.984</td>
+<td>210.792</td>
+</tr>
+<tr>
+<td>world</td>
+<td>780.506</td>
+<td>577.753</td>
+<td>209.461</td>
+</tr>
+<tr>
+<td>make</td>
+<td>681.996</td>
+<td>488.210</td>
+<td>200.592</td>
+</tr>
+<tr>
+<td>book</td>
+<td>743.212</td>
+<td>558.724</td>
+<td>189.867</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Keyword Variable</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>rel</th>
+<th>rel0</th>
+<th>rel1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>album</td>
+<td>1125.279</td>
+<td>694.092</td>
+<td>446.947</td>
+</tr>
+<tr>
+<td>new</td>
+<td>879.093</td>
+<td>546.597</td>
+<td>345.538</td>
+</tr>
+<tr>
+<td>film</td>
+<td>731.715</td>
+<td>421.590</td>
+<td>315.112</td>
+</tr>
+<tr>
+<td>project</td>
+<td>796.624</td>
+<td>576.866</td>
+<td>233.662</td>
+</tr>
+<tr>
+<td>debut</td>
+<td>534.006</td>
+<td>323.058</td>
+<td>219.937</td>
+</tr>
+<tr>
+<td>short</td>
+<td>451.485</td>
+<td>240.044</td>
+<td>213.166</td>
+</tr>
+<tr>
+<td>ep</td>
+<td>489.315</td>
+<td>313.385</td>
+<td>184.012</td>
+</tr>
+<tr>
+<td>book</td>
+<td>596.353</td>
+<td>440.915</td>
+<td>163.288</td>
+</tr>
+<tr>
+<td>music</td>
+<td>562.640</td>
+<td>409.154</td>
+<td>161.962</td>
+</tr>
+<tr>
+<td>help</td>
+<td>482.915</td>
+<td>333.928</td>
+<td>156.931</td>
+</tr>
+</tbody>
+</table>
+<p>It's notable that some of the words repeat on the different variables. For that reason it's
+likely that for optimizing the algorithm only one variable shall be used.</p>
+<h3>Algorithms and Techniques</h3>
+<p>A few classification algorithms were selected to be used across this project measuring it's performance with the goal to find the one that provides the best accuracy. Those are: Decision Tree, Random Forest and Stochastic Gradient Descent.</p>
+<p>Also, the classification will be made taking into account the textual variables. This shall be done using the Bag of Words technique. On a Bag of Words, each words or combination of words in a N-gram is a dimension. With that in mind, the algorithm used for this classification
+needs to perform well with highly dimension data.</p>
+<p>Decision Tree Classifier are a simple method to create a classification model based on simple rules inferred from the data features. It's simpliciry might not be suitable for a Machine Learning problem that involves too many features as the processing with textual variables using Bag of Words. [<a href="http://scikit-learn.org/stable/modules/tree.html">http://scikit-learn.org/stable/modules/tree.html</a>]</p>
+<p>Random Forest Classifiers can tackle a great range of Machine Learning problems. According to Breiman (2001), medical diagnosis and document retrieval problems have the many input features and each one of them contains a small amount of information and Random Forest classifiers a single tree classifier will not perform very well in this scenario but a Random Forest can result in a greater accuracy. [<a href="https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf">https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf</a>]</p>
+<p>Stochastic Gradient Descent is a simple but powerful algorithm that works very well with sparse data, making it very reliable for text processing.
+[<a href="http://scikit-learn.org/stable/modules/sgd.html">http://scikit-learn.org/stable/modules/sgd.html</a>]</p>
+<p>There are two algorithms that should be tested to see witch one performs better, the Naive Bayes and Linear Reggression. [<a href="http://fastml.com/classifying-text-with-bag-of-words-a-tutorial/">http://fastml.com/classifying-text-with-bag-of-words-a-tutorial/</a>]</p>
+<p>Besides the classification algorithm to boost the performance of the text analysis, the TD/IDF technique was used for creating the Bag of Words (BoW) before using the classification algorithm. This algorithm is intended to create a BoW with tuple of the term and a score related to the Term Frequency (TF) divided by the Invert Document Frequency (IDF). The rational on that is that terms that appear less on the document are more important that frequent words (like the, a, is, etc). [<a href="http://scikit-learn.org/stable/modules/feature_extraction.html">http://scikit-learn.org/stable/modules/feature_extraction.html</a>]</p>
+<h3>Benchmark</h3>
+<p>Dilip Lilaramani submitted his work in this dataset were he compares the performance for this
+prediction using different algorithms. The table bellow summarize the results he got.</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LogisticRegression</td>
+<td>0.680281</td>
+</tr>
+<tr>
+<td>LinearDiscriminantAnalysis</td>
+<td>0.677164</td>
+</tr>
+<tr>
+<td>KNeighborsClassifier</td>
+<td>0.646913</td>
+</tr>
+<tr>
+<td>DecisionTreeClassifier</td>
+<td>0.601920</td>
+</tr>
+<tr>
+<td>GaussianNB</td>
+<td>0.353651</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.kaggle.com/dilipajm/kickstarter-project-funding-prediction">https://www.kaggle.com/dilipajm/kickstarter-project-funding-prediction</a></p>
+<p>The goal for this project is to get a classifier that scores higher than 0.680281 by making use of text variables.</p>
+<h2>III. Methodology</h2>
+<p><em>(approx. 3-5 pages)</em></p>
+<h3>Data Preprocessing</h3>
+<p>Most of the data preprocessing and feature engineering was done on the data exploration phase. The code block bellow was used to preprocess the data on data exploration phase.</p>
+<pre class="editor-colors lang-Python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--comment syntax--line syntax--number-sign syntax--python"><span class="syntax--punctuation syntax--definition syntax--comment syntax--python"><span>#</span></span><span>&nbsp;1.&nbsp;Drop&nbsp;state_changed_at&nbsp;and&nbsp;created_at&nbsp;(launched_at&nbsp;and&nbsp;deadline&nbsp;are&nbsp;the&nbsp;dates&nbsp;that&nbsp;matter)</span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>prepared</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>original</span><span>.</span><span>drop</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>created_at</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>state_changed_at</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span><span>,&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>axis</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>1</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--comment syntax--line syntax--number-sign syntax--python"><span class="syntax--punctuation syntax--definition syntax--comment syntax--python"><span>#</span></span><span>&nbsp;2.&nbsp;Replace&nbsp;na&nbsp;to&nbsp;empty&nbsp;strings&nbsp;on&nbsp;name,&nbsp;desc&nbsp;and&nbsp;keywords</span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>name</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>name</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>illna</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span class="syntax--meta syntax--empty-string syntax--single syntax--python"><span>'</span></span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>desc</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>desc</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>illna</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span class="syntax--meta syntax--empty-string syntax--single syntax--python"><span>'</span></span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>keywords</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>keywords</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>illna</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span class="syntax--meta syntax--empty-string syntax--single syntax--python"><span>'</span></span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--comment syntax--line syntax--number-sign syntax--python"><span class="syntax--punctuation syntax--definition syntax--comment syntax--python"><span>#</span></span><span>&nbsp;3.&nbsp;Convert&nbsp;data&nbsp;types</span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>launched_at</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>launched_at</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>pply</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>dt</span><span>.</span><span>fromtimestamp</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>deadline</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>deadline</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>pply</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>dt</span><span>.</span><span>fromtimestamp</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--comment syntax--line syntax--number-sign syntax--python"><span class="syntax--punctuation syntax--definition syntax--comment syntax--python"><span>#</span></span><span>&nbsp;4.&nbsp;Create&nbsp;attribute&nbsp;days&nbsp;open&nbsp;(deadline&nbsp;-&nbsp;launched&nbsp;at)</span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>days_open</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span>x</span><span>.</span><span>days</span><span>&nbsp;</span><span class="syntax--keyword syntax--control syntax--repeat syntax--python"><span>for</span></span><span>&nbsp;</span><span>x</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--logical syntax--python"><span>in</span></span><span>&nbsp;</span><span>(</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>deadline</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>-</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>prepared</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>launched_at</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span></span></div></pre>
+<ol>
+<li>Feature <code>created_at</code> dropped because does not gather much information, <code>launched_at</code> was used to understand when project was launched</li>
+<li>Feature <code>state_changed_at</code> dropped, always after end of poll</li>
+<li>Fill null values with empty string on features <code>name</code>, <code>desc</code> and <code>keywords</code></li>
+<li>Convert string to datetime on features <code>launched_at</code> and <code>deadline</code></li>
+<li>Created a new feature <code>days_open</code> with the number of days that the project remained opened for funding.</li>
+<li>Split <code>X</code> and <code>y</code> vectors for among train and test datasets</li>
+<li>Use k-fold package to</li>
+</ol>
+<p>At the end of the Data Exploration, the dataset was stored into a CSV file for later use at <code>data/processed.csv</code>.</p>
+<h3>Implementation</h3>
+<p>The implementation consists of the code written in Python 2.7. Two modules were written, one to figure out the best algorithm and number of features on the 3 Bag of Words created from the dataset and the second to figure out the best parameters for the chosen algorithm.</p>
+<p>On both modules, data is read from <code>data/processed.csv</code> created previously on this project. There was no significant problem on writting the code and sufficient documentation could be found on Scikit web page, but both modules took a lot of time to run, the first one took more than 8 hours to run on a 8GB Macbook Pro with 2.9 GHz Intel Core i5 processor. The second module took no more than 2 hours.</p>
+<h4>Algorithm and Features Selection</h4>
+<p>To select the algorithm and the number of features on each BoW, code was written as follows:</p>
+<ol>
+<li>For every combination of feature sizes on <code>name</code>, <code>desc</code> and <code>keywords</code></li>
+<li>For each algorithm selected</li>
+<li>Create bag of words for the features <code>name</code>, <code>desc</code> and <code>keywords</code>, storing the results on the sparse vector X, using algorithm TD/IDF</li>
+<li>Store additional <code>deadline</code>, <code>launched_at</code>,  <code>days_open</code>, <code>disable_communication</code>, <code>goal</code> and <code>country</code> features on sparse vector <code>X</code></li>
+<li><code>deadline</code> and <code>launched_at</code> features should be converted to year/month format</li>
+<li>Store the feature <code>final_status</code> to be predicted at <code>y</code> vector</li>
+<li>Split training set and test set (5% for test)</li>
+<li>Fit the model</li>
+<li>Get the score of the model</li>
+<li>Store results on <code>data/results.csv</code> for later analysis</li>
+</ol>
+<p>The code block bellow shows the meaningful part of this implementation.</p>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span>models</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>(</span><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>SGD</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>SGDClassifier</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>random_state</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>42</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>(</span><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>DT</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>DecisionTreeClassifier</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>random_state</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>42</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>(</span><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>RF</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>RandomForestClassifier</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>random_state</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>42</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>kw_features_r</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>range</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>0</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>200</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>50</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>name_features_r</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>range</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>0</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>2501</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>500</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>desc_features_r</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>range</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>0</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>2501</span></span><span>,&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>500</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>total</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>len</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>desc_features_r</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>*</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>len</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>name_features_r</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>*</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>len</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>desc_features_r</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>index</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>0</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>res</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control syntax--repeat syntax--python"><span>for</span></span><span>&nbsp;</span><span>desc_features</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--logical syntax--python"><span>in</span></span><span>&nbsp;</span><span>desc_features_r</span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--repeat syntax--python"><span>for</span></span><span>&nbsp;</span><span>name_features</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--logical syntax--python"><span>in</span></span><span>&nbsp;</span><span>name_features_r</span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--repeat syntax--python"><span>for</span></span><span>&nbsp;</span><span>kw_features</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--logical syntax--python"><span>in</span></span><span>&nbsp;</span><span>kw_features_r</span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--language syntax--python"><span>None</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--conditional syntax--python"><span>if</span></span><span>&nbsp;</span><span>kw_features</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--python"><span>&gt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>0</span></span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>TfidfVectorizer</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>max_features</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>kw_features</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>it_transform</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>list</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>keywords</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--conditional syntax--python"><span>if</span></span><span>&nbsp;</span><span>name_features</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--python"><span>&gt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>0</span></span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>TfidfVectorizer</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>max_features</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>name_features</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>it_transform</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>list</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>name</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--conditional syntax--python"><span>if</span></span><span>&nbsp;</span><span>desc_features</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--python"><span>&gt;</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>0</span></span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>TfidfVectorizer</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>max_features</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>desc_features</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>it_transform</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>list</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>desc</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>deadline</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>pply</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function syntax--inline syntax--python"><span class="syntax--storage syntax--type syntax--function syntax--inline syntax--python"><span>lambda</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function syntax--inline syntax--parameters syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>x</span></span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--python"><span>:</span></span></span><span>&nbsp;</span><span>x</span><span>.</span><span>year</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>+</span></span><span>&nbsp;</span><span>x</span><span>.</span><span>month</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>/</span></span><span class="syntax--constant syntax--numeric syntax--float syntax--python"><span>12.0</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>s_matrix</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>launched_at</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>pply</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function syntax--inline syntax--python"><span class="syntax--storage syntax--type syntax--function syntax--inline syntax--python"><span>lambda</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function syntax--inline syntax--parameters syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>x</span></span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--python"><span>:</span></span></span><span>&nbsp;</span><span>x</span><span>.</span><span>year</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>+</span></span><span>&nbsp;</span><span>x</span><span>.</span><span>month</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>/</span></span><span class="syntax--constant syntax--numeric syntax--float syntax--python"><span>12.0</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>s_matrix</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>days_open</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>t</span><span>olist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>disable_communication</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>t</span><span>olist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>goal</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>t</span><span>olist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>country</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span>c</span><span>at</span><span>.</span><span>codes</span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>y</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>final_status</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X_train</span><span>,&nbsp;</span><span>X_test</span><span>,&nbsp;</span><span>y_train</span><span>,&nbsp;</span><span>y_test</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>model_selection</span><span>.</span><span>train_test_split</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>X</span><span>.</span><span>toarray</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span>y</span><span>,&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>test_size</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--float syntax--python"><span>0.05</span></span><span class="syntax--punctuation syntax--separator syntax--parameters syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>random_state</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>42</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>sample</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--dictionary syntax--python"><span class="syntax--punctuation syntax--definition syntax--dictionary syntax--begin syntax--python"><span>{</span></span><span class="syntax--meta syntax--empty-dictionary syntax--python"><span class="syntax--punctuation syntax--definition syntax--dictionary syntax--end syntax--python"><span>}</span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>sample</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>kw_features</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span>kw_features</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>sample</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>name_features</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span>name_features</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>sample</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>desc_features</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span>desc_features</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--repeat syntax--python"><span>for</span></span><span>&nbsp;</span><span>name</span><span>,&nbsp;</span><span>model</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--logical syntax--python"><span>in</span></span><span>&nbsp;</span><span>models</span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>model</span><span>.</span><span>fit</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>X_train</span><span>,&nbsp;</span><span>y_train</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>score</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>model</span><span>.</span><span>score</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>X_test</span><span>,&nbsp;</span><span>y_test</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>sample</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span>name</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span>score</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>res</span><span>.</span><span>append</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>sample</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>pd</span><span>.</span><span>DataFrame</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>res</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>t</span><span>o_csv</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>data/results.csv</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span><span>,&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>index</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--language syntax--python"><span>False</span></span><span class="syntax--punctuation syntax--separator syntax--parameters syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>sep</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>index</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--augmented syntax--python"><span>+=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>1</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--python"><span>print</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>"</span></span><span class="syntax--constant syntax--other syntax--placeholder syntax--python"><span>%s</span></span><span>/</span><span class="syntax--constant syntax--other syntax--placeholder syntax--python"><span>%s</span></span><span>&nbsp;-&nbsp;</span><span class="syntax--constant syntax--other syntax--placeholder syntax--python"><span>%.2f</span><span>%%</span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>%</span></span><span>&nbsp;</span><span>(</span><span>index</span><span>,</span><span>total</span><span>,</span><span>(</span><span>index</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>*</span></span><span class="syntax--constant syntax--numeric syntax--float syntax--python"><span>100.0</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>/</span></span><span>total</span><span>)</span><span>)</span></span></div></pre>
+<h4>Refinement</h4>
+<p>Based on previous process, the Random Forest Classifier was selected as the best model for this problem. Also, for that algorithm the number of features on each BoW that allows the algorithm to perfom better are 100 features for keywords, 1500 feature for name and 2500 for description. Now it's important to try to get the best parameters for this model in an attempt for tunning the performance of the model. The Scikit model for the purpose is the GridSearchCV and that is what is being used for the refinement of the model.</p>
+<p>The parameters chosen to be tested are the number of estimators, criterion and out of bag score. The results of that test are being store on a CSV file at <code>data/results_refinement.csv</code>. The code block bellow shows the meaningful part of this implementation.</p>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span>param_grid</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--dictionary syntax--python"><span class="syntax--punctuation syntax--definition syntax--dictionary syntax--begin syntax--python"><span>{</span></span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--structure syntax--dictionary syntax--python"><span class="syntax--meta syntax--structure syntax--dictionary syntax--key syntax--python"><span>&nbsp;&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>n_estimators</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--separator syntax--valuepair syntax--dictionary syntax--python"><span>:</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--dictionary syntax--value syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>10</span></span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>50</span></span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>100</span></span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>200</span></span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>500</span></span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>1000</span></span></span><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span></span><span class="syntax--punctuation syntax--separator syntax--dictionary syntax--python"><span>,</span></span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--structure syntax--dictionary syntax--python"><span class="syntax--meta syntax--structure syntax--dictionary syntax--key syntax--python"><span>&nbsp;&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>criterion</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--punctuation syntax--separator syntax--valuepair syntax--dictionary syntax--python"><span>:</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--dictionary syntax--value syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>gini</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>entropy</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--structure syntax--dictionary syntax--python"><span class="syntax--punctuation syntax--definition syntax--dictionary syntax--end syntax--python"><span>}</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--language syntax--python"><span>None</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>TfidfVectorizer</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>max_features</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>100</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>it_transform</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>list</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>keywords</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>TfidfVectorizer</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>max_features</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>1500</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>it_transform</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>list</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>name</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>TfidfVectorizer</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>max_features</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>2500</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>f</span><span>it_transform</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--support syntax--function syntax--builtin syntax--python"><span>list</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>desc</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>deadline</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>pply</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function syntax--inline syntax--python"><span class="syntax--storage syntax--type syntax--function syntax--inline syntax--python"><span>lambda</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function syntax--inline syntax--parameters syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>x</span></span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--python"><span>:</span></span></span><span>&nbsp;</span><span>x</span><span>.</span><span>year</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>+</span></span><span>&nbsp;</span><span>x</span><span>.</span><span>month</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>/</span></span><span class="syntax--constant syntax--numeric syntax--float syntax--python"><span>12.0</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>s_matrix</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>launched_at</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>pply</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function syntax--inline syntax--python"><span class="syntax--storage syntax--type syntax--function syntax--inline syntax--python"><span>lambda</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function syntax--inline syntax--parameters syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>x</span></span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--python"><span>:</span></span></span><span>&nbsp;</span><span>x</span><span>.</span><span>year</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>+</span></span><span>&nbsp;</span><span>x</span><span>.</span><span>month</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>/</span></span><span class="syntax--constant syntax--numeric syntax--float syntax--python"><span>12.0</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>a</span><span>s_matrix</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>days_open</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>t</span><span>olist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>disable_communication</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>t</span><span>olist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>goal</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>t</span><span>olist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>X</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>hstack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span>X</span><span>,&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>np</span><span>.</span><span>column_stack</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>(</span><span class="syntax--meta syntax--function-call syntax--python"><span>data</span><span>.</span><span>index</span><span>.</span><span>tolist</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>country</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>.</span><span>c</span><span>at</span><span>.</span><span>codes</span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>)</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>model</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>GridSearchCV</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>RandomForestClassifier</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>random_state</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>42</span></span><span class="syntax--punctuation syntax--separator syntax--parameters syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>n_jobs</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>2</span></span><span class="syntax--punctuation syntax--separator syntax--parameters syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>criterion</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>entropy</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>cv</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>5</span></span><span class="syntax--punctuation syntax--separator syntax--parameters syntax--python"><span>,</span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>param_grid</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>param_grid</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>y</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>final_status</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>X_train</span><span>,&nbsp;</span><span>X_test</span><span>,&nbsp;</span><span>y_train</span><span>,&nbsp;</span><span>y_test</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>model_selection</span><span>.</span><span>train_test_split</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>X</span><span>.</span><span>toarray</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>,&nbsp;</span><span>y</span><span>,&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>test_size</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--float syntax--python"><span>0.05</span></span><span class="syntax--punctuation syntax--separator syntax--parameters syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>random_state</span></span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>42</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>model</span><span>.</span><span>fit</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>X_train</span><span>,&nbsp;</span><span>y_train</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>score</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>model</span><span>.</span><span>score</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>X_test</span><span>,&nbsp;</span><span>y_test</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--python"><span>print</span></span><span>&nbsp;</span><span>score</span></span></div></pre>
+<h2>IV. Results</h2>
+<p><em>(approx. 2-3 pages)</em></p>
+<h3>Model Evaluation and Validation</h3>
+<p>On the Algorithm and Feature Selection phase a combination of number of features of keywords, names and description bag of words were run with 3 classifiers: Random Forest, Stochastic Gradient Descent and Decision Tree. The accuracy was stored for later analysis that follows.</p>
+<p>Using only one BoW we have the 3 charts bellow.</p>
+<center>
+<img title="Classifiers with Keywords BoW" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/keywords_classifiers.png"><br>
+Classifiers with Keywords BoW
+</center>
+
+<center>
+<img title="Classifiers with Names BoW" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/name_classifiers.png"><br>
+Classifiers with Names BoW
+</center>
+
+<center>
+<img title="Classifiers with Description BoW" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/desc_classifiers.png"><br>
+Classifiers with Description BoW
+</center>
+
+<p>The Stochastic Gradient Descent remain constant on all three charts, meaning that it's not taking advantage of the BoW doesn't matter it's size. There is a small improvement on Decision Tree Classifier when adding BoW but the classifier that take most advantage of it seems to be the Random Forest Classifier. From these charts the best number of features for the Random Forest seems to be 150 features for Keyword BoW, 2000 for Name BoW and 500 for Description BoW.</p>
+<p>As we order the results by descending accuracy we can have a more precise view of the best algorithms, the following tables present the top 5 results for each of the classifiers.</p>
+<ul>
+<li>Best BoW for Decision Tree Classifiers</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>kw_features</th>
+<th>name_features</th>
+<th>desc_features</th>
+<th>DT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>90</td>
+<td>100</td>
+<td>2000</td>
+<td>1500</td>
+<td>0.671251</td>
+</tr>
+<tr>
+<td>13</td>
+<td>50</td>
+<td>1500</td>
+<td>0</td>
+<td>0.670213</td>
+</tr>
+<tr>
+<td>17</td>
+<td>50</td>
+<td>2000</td>
+<td>0</td>
+<td>0.668915</td>
+</tr>
+<tr>
+<td>56</td>
+<td>0</td>
+<td>1000</td>
+<td>1000</td>
+<td>0.668915</td>
+</tr>
+<tr>
+<td>143</td>
+<td>150</td>
+<td>2500</td>
+<td>2500</td>
+<td>0.668656</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Best BoW for Random Forest Classifiers</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>kw_features</th>
+<th>name_features</th>
+<th>desc_features</th>
+<th>RF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>134</td>
+<td>100</td>
+<td>1500</td>
+<td>2500</td>
+<td>0.728075</td>
+</tr>
+<tr>
+<td>56</td>
+<td>0</td>
+<td>1000</td>
+<td>1000</td>
+<td>0.726518</td>
+</tr>
+<tr>
+<td>46</td>
+<td>100</td>
+<td>2500</td>
+<td>500</td>
+<td>0.726258</td>
+</tr>
+<tr>
+<td>114</td>
+<td>100</td>
+<td>2000</td>
+<td>2000</td>
+<td>0.725221</td>
+</tr>
+<tr>
+<td>62</td>
+<td>100</td>
+<td>1500</td>
+<td>1000</td>
+<td>0.724702</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Best BoW for Stochastic Gradient Descent Classifiers</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>kw_features</th>
+<th>name_features</th>
+<th>desc_features</th>
+<th>SGD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.71588</td>
+</tr>
+<tr>
+<td>1</td>
+<td>50</td>
+<td>0</td>
+<td>0</td>
+<td>0.71588</td>
+</tr>
+<tr>
+<td>92</td>
+<td>0</td>
+<td>2500</td>
+<td>1500</td>
+<td>0.71588</td>
+</tr>
+<tr>
+<td>93</td>
+<td>50</td>
+<td>2500</td>
+<td>1500</td>
+<td>0.71588</td>
+</tr>
+<tr>
+<td>94</td>
+<td>100</td>
+<td>2500</td>
+<td>1500</td>
+<td>0.71588</td>
+</tr>
+</tbody>
+</table>
+<p>Considering those 3 tables above, the best algorithm for this problem is the Random Forest Classifier with a configuration of 100, 1500 and 2500 features for the keywords, name and description bag of words. This is the configuration that was used on the algorithm refinement.</p>
+<p>Running the GridSearchCV for refined took 15 hours in a 2.9 GHz Intel Core i5 processor. After finished, the results stored on <code>data/results_refinement.csv</code> from which the following chart and table were created.</p>
+<center>
+<img title="Result Refinement" alt="alt text" src="/Users/gustavo/projects/leyendecker/predict-kickstarter-funding/img/result_refinement.png"><br>
+Result Refinement
+</center>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>criterion</th>
+<th>n_estimators</th>
+<th>score</th>
+<th>std</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>gini</td>
+<td>10</td>
+<td>0.714731</td>
+<td>0.002425</td>
+</tr>
+<tr>
+<td>1</td>
+<td>gini</td>
+<td>50</td>
+<td>0.721395</td>
+<td>0.001257</td>
+</tr>
+<tr>
+<td>2</td>
+<td>gini</td>
+<td>100</td>
+<td>0.722775</td>
+<td>0.001043</td>
+</tr>
+<tr>
+<td>3</td>
+<td>gini</td>
+<td>200</td>
+<td>0.723198</td>
+<td>0.001240</td>
+</tr>
+<tr>
+<td>4</td>
+<td>gini</td>
+<td>500</td>
+<td>0.723512</td>
+<td>0.001019</td>
+</tr>
+<tr>
+<td>5</td>
+<td>gini</td>
+<td>1000</td>
+<td>0.723430</td>
+<td>0.001547</td>
+</tr>
+<tr>
+<td>6</td>
+<td>entropy</td>
+<td>10</td>
+<td>0.715495</td>
+<td>0.002676</td>
+</tr>
+<tr>
+<td>7</td>
+<td>entropy</td>
+<td>50</td>
+<td>0.722979</td>
+<td>0.001525</td>
+</tr>
+<tr>
+<td>8</td>
+<td>entropy</td>
+<td>100</td>
+<td>0.723553</td>
+<td>0.001298</td>
+</tr>
+<tr>
+<td>9</td>
+<td>entropy</td>
+<td>200</td>
+<td>0.723894</td>
+<td>0.002309</td>
+</tr>
+<tr>
+<td>10</td>
+<td>entropy</td>
+<td>500</td>
+<td>0.724154</td>
+<td>0.002508</td>
+</tr>
+<tr>
+<td>11</td>
+<td>entropy</td>
+<td>1000</td>
+<td>0.724072</td>
+<td>0.002237</td>
+</tr>
+</tbody>
+</table>
+<p>It's important to notice that an increasing number of estimator, creating more complex models does not significant improve the results after 500 estimators. Also we can notice that the entropy criterion performs better than gini method.
+Best model uses entropy criterion and 500 estimators.</p>
+<h3>Justification</h3>
+<p>The resulting model identified as the best solution found on this work used the Random Forest Algorithm using a number of 500 estimators and entropy criterion. For it's input the dimensions deadline, launched_at, days_open, diable_communication, goal and country were used together with 3 bags of words created by textual data from Keywords, Name and Description dimensions using TD/IDF algorithm limiting to total number of features at 150 keywords features, 2500 name features and 1500 description features.</p>
+<p>Using an independent training set, the resulting model got and accuracy score of 0.7304. This outperforms the benchmark project that presented an accuracy score of 0.680281. Considering that the 68.04% of the projects are not approved, a classifier that always return a negative result would score 0.6804 for accuracy, so the proposed algorithm can be useful for increasing the change for a successful prediction.</p>
+<h2>V. Conclusion</h2>
+<p><em>(approx. 1-2 pages)</em></p>
+<h3>Reflection</h3>
+<p>Predicting results of Kickstarter competition for funding project turns out to be a big challenge. The intuition was that the project category would have a strong correlation with the success of the project, but there is no such dimension on the dataset used. On the Exploratory Data Analysis, no strong correlation was found on other dimensions.</p>
+<p>Text regarding project name, description and keywords might reflect on it's category improving the algorithm. The keywords album, film or book probably mean artistic projects. Also, some specific words on the writing of the project description like help, need, world or disruptive might boost the project acceptance rate. With that in mind, the Bag of Words approach was chosen for gathering information from textual data.</p>
+<p>The first section of Chapter IV: Model Evaluation and Validation shows that some algorithms improved it's performance using the Bags of Words, should that it there is some value to that technique.</p>
+<p>A model with accuracy score of 0.7304 was generated by tunning the Random Forest Classifier for this problem, meaning that it will predict if a project will be approved or not on 73% of the time, which is better than the benchmark so the model was successful but must be surely improved for use on a product.</p>
+<p>Although the algorithm seems to learn indeed, it does not provide a great accuracy and therefore not solving a real world problem yet. Some improvements must be made before largely used. If a prediction with much better accuracy could be achieved, it could be used on Kickstarter's website to allow users to properly write better projects getting a better success rate on their projects.</p>
+<h3>Improvement</h3>
+<p>In this project a simple model was created taking advantage of the usage of Bag of Words to predict kickstarter results along with other dimensions. It performed better than the benchmark but the model used as a comparison don't have a performance better than a model were all results were false, so it's not very good.</p>
+<p>A better benchmark would be an educated guess of a user reading project description and evaluating other dimensions based on his intuition. In this case, it's possible the the benchmark would outperform the model generated in this project.</p>
+<p>A better model for predicting Kickstarter projects can be achieved by taking advantage of other Machine Learning techniques and gathering more information about the dataset.</p>
+<p>Suggestions regarding Machine Learning algorithms and techniques:</p>
+<ul>
+<li>Improve Bag of Words performance by using a custom made dictionary</li>
+<li>Test different classification Algorithms</li>
+<li>Combine with external datasets such as industry venture capital investments on each sector / category</li>
+<li>Alternative feature engineering process and trying to identify / remove outliers more carefully</li>
+</ul>
+<p>The dataset should also be improved and more information should be gathered. The category in which the project is running might be very useful for the prediction model. Also the user that opens the project and the number of projects that this user previously submitted might also be very relevant.</p>
+<p>Improving the model with those suggestions it's possible to create a model that would outperform an educated guess on the performance of the project made by an user. Understanding this model if very important to help users write better projects with better chance to get his/her project funded.</p></body>
+</html>

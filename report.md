@@ -43,7 +43,11 @@ get more funding, helping the economy and amount of money invested on crowdfundi
 
 ### Problem Statement
 
-Write code and create a model using one of more Machine Learning algorithms that predicts if a list of projects will get funded, optimized for accuracy. The resulting code can use all the attributes described above with the exception of `backers_count` and `final_status`.
+The goal of this work is to create a prediction model that can successfully anticipate if a project will get funded or not meaning that it is a binary classification problem.
+
+The dataset includes the dimensions `backers_count` and `final_status` that are both only available at the final of the competition, therefore `backers_count` cannot be used for the classification algorithm and `final_status` is the binary variable that needs to be predicted.
+
+The following steps must be executed to create a prediction model for this problem: Data Analysis, Feature Selection, Model Selection and Validation and Performance Tuning.
 
 ### Metrics
 
@@ -52,6 +56,8 @@ The metrics used on this project to measure it's performance is the accuracy. Th
 ```code
 accuracy = (true positives + true negatives) / total population
 ```
+
+There are a few other classification metrics that could be used for this project such as F Score and Area Under ROC Curve, and accuracy might be misleading if the number of instances are unbalanced. But since the benchmark uses accuracy as the only metric to measure performance the same metric was used. There is important to notice that 70.86% of the projects are not funded to the any accuracy lower than this value is not considered as a good result.
 
 A sample from data instances that are available for training will be used for measuring
 the performance of the code. Since there are more that 100k records for training, %5 of that will be enough for measuring the accuracy to evaluate the performacne of the solution.
@@ -83,7 +89,7 @@ attributes.
 
 ### Data Exploration
 
-A data exploration will be done on the scalar, categorial and period variables of the dataset.
+There are 108129 instances of the dataset and 12 features (discarding `final_status` and `backers_count`). A data exploration will be done on the scalar, categorial and period variables of the dataset.
 
 
 #### Scalar variables
@@ -105,7 +111,7 @@ for crowdfunding.
 |max|	100000000.000	|219382.000	|91.000|
 
 There is a huge standard deviation on goal attribute, there must be some outliers like the
-max value that is USD 100mi. Same for backers count. Lets see an histogram for goal and
+max value that is USD 100mi. Those instances should not be taking into consideration on the prediction algorithm as they do not reflect the reality of the dataset misleading most of the algorithms available. Those can be errors or projects that should not be taking into account for this computation. Same for backers count. Lets see an histogram for goal and
 another for backers count.
 
 <center>
@@ -133,7 +139,7 @@ outliers and cut of from the dataset. Resulting is the table and histograms bell
 |max	|70000.000	|355.000	|91.000
 
 Please notice that the standard deviation of goal fell from 971902.705 to 11953.016, and
-backers count standard deviation changed from 1176.745 to 63.195.
+backers count standard deviation changed from 1176.745 to 63.195. This is beneficial for a machine learning algorithm as stands for a much more normalized dataset and no instance will create a huge impact on the results.
 
 
 <center>
@@ -359,15 +365,21 @@ likely that for optimizing the algorithm only one variable shall be used.
 
 ### Algorithms and Techniques
 
-The classification will be made taking into account the textual variables. This shall be
-done using the Bag of Words technique. On a Bag of Words, each words or combination of words
-in a N-gram is a dimension. With that in mind, the algorithm used for this classification
+A few classification algorithms were selected to be used across this project measuring it's performance with the goal to find the one that provides the best accuracy. Those are: Decision Tree, Random Forest and Stochastic Gradient Descent.
+
+Also, the classification will be made taking into account the textual variables. This shall be done using the Bag of Words technique. On a Bag of Words, each words or combination of words in a N-gram is a dimension. With that in mind, the algorithm used for this classification
 needs to perform well with highly dimension data.
 
-There are two algorithms that should be tested to see witch one performs better, the
-Naive Bayes and Linear Reggression [http://fastml.com/classifying-text-with-bag-of-words-a-tutorial/].
+Decision Tree Classifier are a simple method to create a classification model based on simple rules inferred from the data features. It's simpliciry might not be suitable for a Machine Learning problem that involves too many features as the processing with textual variables using Bag of Words. [http://scikit-learn.org/stable/modules/tree.html]
 
-To boost performance, the N-gram approach should be considered as well as using TD/IDF.
+Random Forest Classifiers can tackle a great range of Machine Learning problems. According to Breiman (2001), medical diagnosis and document retrieval problems have the many input features and each one of them contains a small amount of information and Random Forest classifiers a single tree classifier will not perform very well in this scenario but a Random Forest can result in a greater accuracy. [https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf]
+
+Stochastic Gradient Descent is a simple but powerful algorithm that works very well with sparse data, making it very reliable for text processing.
+[http://scikit-learn.org/stable/modules/sgd.html]
+
+There are two algorithms that should be tested to see witch one performs better, the Naive Bayes and Linear Reggression. [http://fastml.com/classifying-text-with-bag-of-words-a-tutorial/]
+
+Besides the classification algorithm to boost the performance of the text analysis, the TD/IDF technique was used for creating the Bag of Words (BoW) before using the classification algorithm. This algorithm is intended to create a BoW with tuple of the term and a score related to the Term Frequency (TF) divided by the Invert Document Frequency (IDF). The rational on that is that terms that appear less on the document are more important that frequent words (like the, a, is, etc). [http://scikit-learn.org/stable/modules/feature_extraction.html]
 
 ### Benchmark
 
@@ -423,7 +435,7 @@ At the end of the Data Exploration, the dataset was stored into a CSV file for l
 
 The implementation consists of the code written in Python 2.7. Two modules were written, one to figure out the best algorithm and number of features on the 3 Bag of Words created from the dataset and the second to figure out the best parameters for the chosen algorithm.
 
-On both modules, data is read from `data/processed.csv` created previously on this project.
+On both modules, data is read from `data/processed.csv` created previously on this project. There was no significant problem on writting the code and sufficient documentation could be found on Scikit web page, but both modules took a lot of time to run, the first one took more than 8 hours to run on a 8GB Macbook Pro with 2.9 GHz Intel Core i5 processor. The second module took no more than 2 hours.
 
 #### Algorithm and Features Selection
 
@@ -635,6 +647,8 @@ Text regarding project name, description and keywords might reflect on it's cate
 The first section of Chapter IV: Model Evaluation and Validation shows that some algorithms improved it's performance using the Bags of Words, should that it there is some value to that technique.
 
 A model with accuracy score of 0.7304 was generated by tunning the Random Forest Classifier for this problem, meaning that it will predict if a project will be approved or not on 73% of the time, which is better than the benchmark so the model was successful but must be surely improved for use on a product.
+
+Although the algorithm seems to learn indeed, it does not provide a great accuracy and therefore not solving a real world problem yet. Some improvements must be made before largely used. If a prediction with much better accuracy could be achieved, it could be used on Kickstarter's website to allow users to properly write better projects getting a better success rate on their projects.
 
 ### Improvement
 
